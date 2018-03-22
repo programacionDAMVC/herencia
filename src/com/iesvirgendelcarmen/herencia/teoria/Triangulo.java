@@ -30,7 +30,7 @@ public class Triangulo extends Poligono {
 		return lado3;
 	}
 	
-	public float calcularPerimetro() {
+	public final float calcularPerimetro() {
 		return lado1 + lado2 +lado3;
 	}
 

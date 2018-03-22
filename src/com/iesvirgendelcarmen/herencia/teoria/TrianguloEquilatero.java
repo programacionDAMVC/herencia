@@ -1,6 +1,6 @@
 package com.iesvirgendelcarmen.herencia.teoria;
 
-public class TrianguloEquilatero extends Triangulo {
+public final class TrianguloEquilatero extends Triangulo {
 	private float lado;
 
 	public TrianguloEquilatero(float lado) {

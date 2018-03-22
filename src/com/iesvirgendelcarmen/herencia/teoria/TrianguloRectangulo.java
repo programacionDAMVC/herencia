@@ -1,6 +1,6 @@
 package com.iesvirgendelcarmen.herencia.teoria;
 
-public class TrianguloRectangulo extends Triangulo{
+public final class TrianguloRectangulo extends Triangulo{
 	
 	private float cateto1;
 	private float cateto2;

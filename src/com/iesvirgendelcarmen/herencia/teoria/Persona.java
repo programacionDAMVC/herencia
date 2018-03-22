@@ -1,8 +1,10 @@
 package com.iesvirgendelcarmen.herencia.teoria;
 
-public class Persona {
+public class Persona implements Cloneable{
+	
 	private String nombre;
 	private int edad;
+	
 	public Persona(String nombre, int edad) {
 		this.nombre = nombre;
 		this.edad = edad;
@@ -31,6 +33,9 @@ public class Persona {
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		return result;
 	}
+	
+	//dos objetos Persona son iguales siempre y cuando
+	//tenga el mismo nombre y edad
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -49,5 +54,12 @@ public class Persona {
 			return false;
 		return true;
 	}
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+	
 	
 }
