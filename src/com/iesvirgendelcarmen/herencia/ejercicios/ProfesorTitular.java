@@ -13,6 +13,14 @@ public class ProfesorTitular extends Profesor {
 		this.fechaIncorporacion = fechaIncorporacion;
 	}
 
+	
+	
+	public LocalDate getFechaIncorporacion() {
+		return fechaIncorporacion;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "ProfesorTitular [fechaIncorporacion=" + fechaIncorporacion + ", especialidad " + getEspecialidad()

@@ -1,6 +1,7 @@
 package com.iesvirgendelcarmen.herencia.ejercicios;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class TestProfesores {
 	public static void main(String[] args) {
@@ -16,6 +17,7 @@ public class TestProfesores {
 				"latin", LocalDate.of(2018, 11, 11));
 		Profesor profesor5 = new ProfesorInterino("lucas", "1", LocalDate.of(1975, 12, 10),
 				"latin", LocalDate.of(2017, 11, 11));
+		
 		System.out.println("Añadiendo profesores al claustro");
 		claustro.adicionarProfesor(profesor1);
 		claustro.adicionarProfesor(profesor2);
@@ -23,10 +25,18 @@ public class TestProfesores {
 		claustro.adicionarProfesor(profesor4);
 		claustro.adicionarProfesor(profesor5);
 		
-		System.out.println(claustro);
-		System.out.println(claustro.getLista());
+		System.out.println(claustro + "\n\n"); //no tiene toString sobreescrito, muestra Object
+		System.out.println(claustro.getLista() + "\n\n");
 
+		List<Profesor> lista = claustro.getLista();
 		
+		for (Profesor profesor : lista) {
+			System.out.println(profesor.toString());
+			if (profesor instanceof ProfesorTitular)
+				System.out.println(((ProfesorTitular) profesor).getFechaIncorporacion());
+			else
+				System.out.println(((ProfesorInterino) profesor).getFinDeContrato());
+		}
 		
 		
 		
